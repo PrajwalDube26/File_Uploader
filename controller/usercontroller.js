@@ -16,7 +16,7 @@ const resister_user=async(req,res)=>{
         const email_avail=await user.findOne({email:req.body.email});
         if(email_avail)
         {
-            res.status(400).json({succes:false,message:"Email already exists"});
+            res.status(400).json({succes:false,message:"Email already exist"});
         }
         await new_user.save();
         return res.status(200).json({succes:true,message:"user resister succesfully"});
