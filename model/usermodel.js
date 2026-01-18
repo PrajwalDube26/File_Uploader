@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const { type } = require('os')
 
 const user=mongoose.Schema({
+    
     name:{
         type:String,
         required:true
